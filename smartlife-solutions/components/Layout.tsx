@@ -10,7 +10,14 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        {children}
+        {/* 12-column grid container with 24px padding and 16px margins */}
+        <div className="container mx-auto px-6 py-4 max-w-7xl">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12">
+              {children}
+            </div>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>
