@@ -1,3 +1,5 @@
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
+
 export default function CaseStudies() {
   const caseStudies = [
     {
@@ -26,6 +28,30 @@ export default function CaseStudies() {
     }
   ];
 
+  const beforeAfterItems = [
+    {
+      id: "1",
+      title: "Smart Lighting Transformation",
+      beforeImage: "placeholder-before-1.jpg",
+      afterImage: "placeholder-after-1.jpg",
+      description: "From traditional switches to voice-controlled smart lighting with energy monitoring"
+    },
+    {
+      id: "2", 
+      title: "Security System Upgrade",
+      beforeImage: "placeholder-before-2.jpg",
+      afterImage: "placeholder-after-2.jpg",
+      description: "Complete security overhaul with smart cameras, sensors, and mobile monitoring"
+    },
+    {
+      id: "3",
+      title: "Entertainment Center Integration",
+      beforeImage: "placeholder-before-3.jpg", 
+      afterImage: "placeholder-after-3.jpg",
+      description: "Multi-room audio system with smart TV and streaming service integration"
+    }
+  ];
+
   return (
     <div className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +61,12 @@ export default function CaseStudies() {
             Real stories from our satisfied customers across Hyderabad. 
             See how SmartLife Solutions has transformed homes and lives.
           </p>
+        </div>
+
+        {/* Before & After Slider Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Before & After Transformations</h2>
+          <BeforeAfterSlider items={beforeAfterItems} />
         </div>
 
         <div className="space-y-12">
@@ -49,7 +81,7 @@ export default function CaseStudies() {
                 </div>
                 
                 <div className="md:w-2/3 p-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 product-name-shadow">{study.title}</h2>
                   
                   <div className="space-y-4">
                     <div>

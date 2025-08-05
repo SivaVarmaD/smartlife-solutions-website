@@ -1,3 +1,7 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 export default function About() {
   return (
     <div className="bg-gray-50 py-16">
@@ -26,7 +30,12 @@ export default function About() {
             </p>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <motion.div 
+            className="bg-white p-8 rounded-lg shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
             <p className="text-gray-600 mb-6">
               To make smart home technology accessible and affordable for every family in Hyderabad, 
@@ -51,7 +60,7 @@ export default function About() {
                 <span>24/7 support</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
