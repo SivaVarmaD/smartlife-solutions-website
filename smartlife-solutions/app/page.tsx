@@ -1,74 +1,102 @@
 export default function Home() {
   return (
-    <div className="bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Home with Smart Technology
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              SmartLife Solutions brings cutting-edge home automation to Hyderabad, 
-              making your home more comfortable, secure, and energy-efficient.
-            </p>
-            <div className="space-x-4">
-              <a
-                href="/request-demo"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-              >
-                Request Demo
-              </a>
-              <a
-                href="/solutions"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-block"
-              >
-                Our Solutions
-              </a>
+    <>
+      {/* Hero Section - Full width, breaks out of grid container */}
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden -mx-6 -mt-4">
+        {/* 
+          TODO: Add layered background here:
+          1. Add #007BFF gradient background
+          2. Add home icon pattern overlay
+          Example implementation:
+          - bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800
+          - Add pattern overlay with home icons using CSS or SVG
+        */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+        
+        {/* Placeholder for home icon pattern - will be added later */}
+        <div className="absolute inset-0 opacity-10">
+          {/* Pattern placeholder - add home icon pattern here */}
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-6 max-w-7xl">
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-span-12 text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Transform Your Home with
+                <span className="block text-blue-200">Smart Technology</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-blue-100">
+                SmartLife Solutions brings cutting-edge home automation to Hyderabad, 
+                making your home more comfortable, secure, and energy-efficient.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/request-demo"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Request Demo
+                </a>
+                <a
+                  href="/solutions"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Our Solutions
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose SmartLife Solutions?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We provide comprehensive home automation solutions tailored to your needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏠</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Smart Home Integration</h3>
-              <p className="text-gray-600">Seamless integration of all your smart devices</p>
+      {/* Features Section - Within grid system */}
+      <section className="py-16 bg-gray-50">
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose SmartLife Solutions?
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We provide comprehensive home automation solutions tailored to your needs
+              </p>
             </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔒</span>
+            {/* Features Grid - Responsive across different screen sizes */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Smart Home Integration</h3>
+                <p className="text-gray-600">Seamless integration of all your smart devices for complete home automation</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Enhanced Security</h3>
-              <p className="text-gray-600">Advanced security systems for peace of mind</p>
-            </div>
-            
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+              
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔒</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Enhanced Security</h3>
+                <p className="text-gray-600">Advanced security systems with smart monitoring for complete peace of mind</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Energy Efficiency</h3>
-              <p className="text-gray-600">Reduce energy costs with smart automation</p>
+              
+              <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Energy Efficiency</h3>
+                <p className="text-gray-600">Reduce energy costs by up to 40% with intelligent automation systems</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
