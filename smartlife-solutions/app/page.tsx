@@ -2,16 +2,19 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Full width, breaks out of grid container */}
-      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden -mx-6 -mt-4">
-        {/* 
-          TODO: Add layered background here:
-          1. Add #007BFF gradient background
-          2. Add home icon pattern overlay
-          Example implementation:
-          - bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800
-          - Add pattern overlay with home icons using CSS or SVG
-        */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+      <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden -mx-6 -mt-4 border-2 border-silver">
+        {/* Villa Background Placeholder */}
+        <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
+          {/* Placeholder for high-resolution villa background image */}
+          <div className="text-gray-500 text-center">
+            <div className="text-8xl mb-4">🏡</div>
+            <p className="text-lg font-semibold">Villa Background Placeholder</p>
+            <p className="text-sm text-caption mt-2">Replace with high-resolution villa image</p>
+          </div>
+        </div>
+        
+        {/* #007BFF overlay at 50% opacity */}
+        <div className="absolute inset-0 bg-blue-600 opacity-50" style={{ backgroundColor: '#007BFF' }}></div>
         
         {/* Placeholder for home icon pattern - will be added later */}
         <div className="absolute inset-0 opacity-10">

@@ -1,3 +1,5 @@
+import ProductMockup3D from '@/components/ProductMockup3D';
+
 export default function Solutions() {
   const solutions = [
     {
@@ -65,6 +67,34 @@ export default function Solutions() {
             </p>
           </div>
 
+          {/* Featured Product Mockups Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Products</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ProductMockup3D
+                productName="Indoor Monitor"
+                productModel="E216"
+                icon="📺"
+                description="High-resolution indoor monitoring with smart connectivity"
+                className="h-64"
+              />
+              <ProductMockup3D
+                productName="Indoor Monitor"
+                productModel="E217"
+                icon="🖥️"
+                description="Advanced indoor monitor with enhanced features"
+                className="h-64"
+              />
+              <ProductMockup3D
+                productName="Video Door Phone"
+                productModel="C112"
+                icon="📞"
+                description="Smart video doorbell with two-way communication"
+                className="h-64"
+              />
+            </div>
+          </div>
+
           {/* Asymmetrical Grid Layout */}
           <div className="grid grid-cols-12 gap-6 auto-rows-max">
             {solutions.map((solution) => {
@@ -74,7 +104,7 @@ export default function Solutions() {
                   {/* Card Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className={`font-bold text-gray-900 mb-3 ${isLarge ? 'text-2xl' : 'text-xl'}`}>
+                      <h3 className={`font-bold text-gray-900 mb-3 product-name-shadow ${isLarge ? 'text-2xl' : 'text-xl'}`}>
                         {solution.title}
                       </h3>
                       <p className={`text-gray-600 ${isLarge ? 'text-base mb-6' : 'text-sm mb-4'}`}>
@@ -116,17 +146,17 @@ export default function Solutions() {
           {/* Additional asymmetrical placeholder cards */}
           <div className="grid grid-cols-12 gap-6 mt-8">
             <div className="card col-span-12 md:col-span-5 bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-2">Custom Solutions</h3>
+              <h3 className="text-xl font-bold mb-2 product-name-shadow">Custom Solutions</h3>
               <p className="text-blue-100">Tailored automation packages for unique requirements</p>
             </div>
             
             <div className="card col-span-12 md:col-span-3 bg-green-50 border border-green-200 p-6 rounded-xl">
-              <h3 className="text-lg font-bold text-green-800 mb-2">Eco-Friendly</h3>
+              <h3 className="text-lg font-bold text-green-800 mb-2 product-name-shadow">Eco-Friendly</h3>
               <p className="text-green-600 text-sm">Sustainable smart home solutions</p>
             </div>
             
             <div className="card col-span-12 md:col-span-4 bg-purple-50 border border-purple-200 p-6 rounded-xl">
-              <h3 className="text-lg font-bold text-purple-800 mb-2">24/7 Support</h3>
+              <h3 className="text-lg font-bold text-purple-800 mb-2 product-name-shadow">24/7 Support</h3>
               <p className="text-purple-600 text-sm">Round-the-clock technical assistance</p>
             </div>
           </div>
